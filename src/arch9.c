@@ -2,7 +2,7 @@
 
 
 
-Arch9 init_arch9(inst_t* program, int size)
+Arch9 init_arch9(inst_t* program)
 {
   return (Arch9){
     .program = program,
@@ -361,7 +361,7 @@ void arch9_run(Arch9* arch, int debug)
 int main(int argc, char* argv[])
 {
 
-  inst_t* program = malloc(sizeof(inst_t)*4);
+  inst_t* program = malloc(sizeof(inst_t)*10);
 
   program[0] = (inst_t){STORE_i, '\n'};  //  store '\n'
   program[1] = (inst_t){STORE_i, 'C'};  //  store 'C'
@@ -376,7 +376,7 @@ int main(int argc, char* argv[])
   program[9] = (inst_t){HLT_i};         //  hlt
 
 
-  Arch9 arch = init_arch9(program, 4);
+  Arch9 arch = init_arch9(program);
 
 
   arch9_run(&arch, 0); // debug = 1 ; prints every instruction name

@@ -12,8 +12,3 @@ arch5 is probably months from my "arch9 init commit" but when it's ready it's sh
 
 
 
-<hr/>
-
-<h2>Arch9 Instruction Set Architecture (ISA)</h2>
-- **STORE** ->  store 64bit of data in memory and increment the Memory Pointer Register
-

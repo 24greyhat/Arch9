@@ -45,7 +45,7 @@ struct {
 
 
 
-Arch9 init_arch9(inst_t* program, int size);
+Arch9 init_arch9(inst_t* program);
 void arch9_run(Arch9* arch, int debug);
 
 
